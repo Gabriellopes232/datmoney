@@ -1,4 +1,3 @@
-import { title } from "process";
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
 import { Container } from "./styles";
@@ -34,10 +33,24 @@ export function TrasactionsTable() {
         <tbody>
           {transactions.map(transactions => (
             <tr key={transactions.id}>
+
               <td>{transactions.title}</td>
-              <td className={transactions.type}>{transactions.amount}</td>
+
+              <td className={transactions.type}>
+                {new Intl.NumberFormat('pt-BR', {
+                  style: 'currency',
+                  currency: 'BRL'
+                }).format(transactions.amount)}
+              </td>
+
               <td>{transactions.category}</td>
-              <td>{transactions.createdAt}</td>
+
+              <td>
+                {new Intl.DateTimeFormat('pt-BR').format(
+                  new Date(transactions.createdAt)
+                )}
+              </td>
+
             </tr>
           ))}
         </tbody>
