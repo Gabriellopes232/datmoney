@@ -8,7 +8,8 @@ export const Container = styled.div`
     div{
         background: var(--shape);
         padding: 1.5rem 2rem;
-        border-radius: 0% .25rem;
+        border-radius: .25rem .25rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         color: var(--tex-title);
         header{
             display: flex;
