@@ -1,4 +1,4 @@
-import { TrasactionsTable } from "../TransactionsTable";
+import { TransactionsTable } from "../TransactionsTable";
 
 import { Summary } from "../Summary";
 
@@ -8,7 +8,7 @@ export function Dashboard() {
   return (
     <Container>
       <Summary />
-      <TrasactionsTable></TrasactionsTable>
+      <TransactionsTable></TransactionsTable>
     </Container>
   );
 }
